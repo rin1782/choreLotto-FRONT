@@ -1,13 +1,19 @@
 class AppContainer{
     chores = []
     kids = []
-    baseURL = ""
+    baseURL = "http://localhost:3000/"
     randomChore = {}
 
     getChores(){
+        fetch(this.baseURL + 'chores')
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data)
+        })
         //make fetch request to /chores
         //populate chores and kids properties with returned json data
         //call renderChores
+        .catch(err => alert(err))
     }
 
     renderChores(){

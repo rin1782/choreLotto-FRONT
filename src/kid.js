@@ -3,3 +3,4 @@ class Kid {
         this.name = name;
     }
 }
+
